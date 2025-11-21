@@ -38,8 +38,8 @@ export default function SkillsPage() {
 
   return (
     <main className="flex-1 bg-background text-foreground">
-      <section className="px-6 md:px-12 py-20">
-        <div className="max-w-4xl mx-auto">
+      <section className="padding-both nav-space">
+        <div className="containers">
           <h1 className="text-4xl md:text-5xl font-bold mb-12">
             Skills & Experience
           </h1>

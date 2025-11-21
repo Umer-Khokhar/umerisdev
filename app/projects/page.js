@@ -69,8 +69,8 @@ export default function ProjectsPage() {
 
   return (
     <main className="flex-1 bg-background text-foreground">
-      <section className="px-6 md:px-12 py-20">
-        <div className="max-w-4xl mx-auto">
+      <section className="nav-space padding-both">
+        <div className="containers">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
           <p className="text-lg text-muted-foreground mb-12">
             A selection of projects I have worked on, showcasing my skills in

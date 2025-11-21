@@ -6,7 +6,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8">
+    <header className="bg-white/60 backdrop-blur-2xl z-30 fixed top-0 left-0 right-0 mb-12 border-b border-gray-200 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1660px] mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Left side - Logo and Navigation */}

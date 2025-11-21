@@ -5,13 +5,13 @@ import { Card } from "@/components/ui/card";
 export default function AboutPage() {
   return (
     <main className="flex-1 bg-background text-foreground">
-      <section className="px-6 md:px-12 py-20">
-        <div className="max-w-3xl mx-auto">
+      <section className="padding-both nav-space">
+        <div className="containers">
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-8">About Me</h1>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate full-stack developer with 5+ years of
+                I am a passionate full-stack developer with 5+ years of
                 experience building web applications that blend thoughtful
                 design with robust engineering. I specialize in crafting
                 scalable solutions that prioritize user experience and
@@ -26,14 +26,14 @@ export default function AboutPage() {
               </p>
 
               <p>
-                I'm constantly learning and exploring new technologies. Whether
-                it's diving into backend optimization, frontend performance, or
-                cloud infrastructure, I'm driven by the challenge of solving
+                I am constantly learning and exploring new technologies. Whether
+                it is diving into backend optimization, frontend performance, or
+                cloud infrastructure, I am driven by the challenge of solving
                 complex problems.
               </p>
 
               <p>
-                In my spare time, you'll find me contributing to open-source
+                In my spare time, you will find me contributing to open-source
                 projects, writing technical articles, or experimenting with side
                 projects. I believe in sharing knowledge and giving back to the
                 community that has helped me grow as a developer.

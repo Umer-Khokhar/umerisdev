@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <Sidebar />
-        {children}
+        <div className="pt-12 md:pt-0 md:ml-64">{children}</div>
       </body>
     </html>
   );

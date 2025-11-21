@@ -7,9 +7,10 @@ const DocumentationSidebar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const navItems = [
-    { id: "introduction", label: "Introduction" },
+    { id: "/", label: "Introduction" },
     { id: "about", label: "About Me" },
-    { id: "skills", label: "Skills & Tools" },
+    { id: "projects", label: "Projects" },
+    { id: "skills-and-experience", label: "skills & Experience" },
     { id: "experience", label: "Experience" },
     { id: "contact", label: "Contact" },
     { id: "stats", label: "Stats" },
@@ -32,11 +33,10 @@ const DocumentationSidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:sticky top-0 left-0 h-screen z-40 w-64 transform transition-transform duration-300 ease-in-out ${
-          isMobileOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 md:mt-0 md:ml-0 md:h-auto border-r border-gray-200`}
+        className={`fixed bg-gray-50/50 blur-in-sm z-10 top-12 left-0 min-h-screen w-64 transform transition-transform duration-300 ease-in-out
+        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:mt-0 md:ml-0 md:h-auto border-r border-gray-200`}
       >
-        <div className="p-6">
+        <div className="padding-both">
           <h1 className="text-2xl font-bold mb-8">Portfolio Docs</h1>
 
           <nav>
@@ -45,7 +45,7 @@ const DocumentationSidebar = () => {
                 <li key={item.id}>
                   <Link
                     href={`${item.id}`}
-                    className="flex items-center py-2 rounded-lg transition-colors duration-200 group"
+                    className="flex items-center py-1 rounded-lg transition-colors duration-200 group"
                     onClick={() => setIsMobileOpen(false)}
                   >
                     <span className="font-medium">{item.label}</span>

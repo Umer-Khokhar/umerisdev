@@ -31,7 +31,7 @@ export default function ContactPage() {
   return (
     <main className="flex-1 bg-background text-foreground">
       <section className="px-6 md:px-12 py-20">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
           <p className="text-lg text-muted-foreground mb-12">
             I am always interested in hearing about new projects and
