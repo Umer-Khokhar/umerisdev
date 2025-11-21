@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
@@ -24,6 +25,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="e4f61452-5df3-4dd5-bbb1-54586e6d9dbe"
+        ></script>
         <Header />
         <Sidebar />
         <div className="pt-12 md:pt-0 md:ml-64">{children}</div>
