@@ -1,131 +1,318 @@
-"use client";
+import React from "react";
+import {
+  Code,
+  Server,
+  Wrench,
+  Users,
+  Briefcase,
+  Calendar,
+  MapPin,
+  ChevronRight,
+} from "lucide-react";
 
-export default function SkillsPage() {
-  const skills = {
-    Frontend: [
-      "React / Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "HTML & CSS",
-      "Redux / Context API",
-      "Web Performance",
-    ],
-    Backend: [
-      "Node.js / Express",
-      "PostgreSQL",
-      "MongoDB",
-      "REST APIs",
-      "Authentication",
-      "Caching & CDN",
-    ],
-    "Tools & Platforms": [
-      "Git & GitHub",
-      "Docker",
-      "AWS / Vercel",
-      "CI/CD Pipelines",
-      "Testing (Jest, Vitest)",
-      "GraphQL",
-    ],
-    "Soft Skills": [
-      "Problem Solving",
-      "Team Collaboration",
-      "Technical Communication",
-      "Code Review",
-      "Project Management",
-      "Mentoring",
-    ],
-  };
+export default function SkillsSection() {
+  const experiences = [
+    {
+      company: "Tech Solutions Inc.",
+      position: "Senior Full Stack Developer",
+      location: "San Francisco, CA",
+      period: "Jan 2022 - Present",
+      type: "Full-time",
+      logo: "https://ui-avatars.com/api/?name=TS&background=3b82f6&color=fff&size=128",
+      responsibilities: [
+        "Led development of microservices architecture serving 100K+ daily active users",
+        "Implemented CI/CD pipelines reducing deployment time by 60%",
+        "Mentored junior developers and conducted code reviews",
+        "Architected and built real-time analytics dashboard using React and D3.js",
+      ],
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"],
+    },
+    {
+      company: "Digital Innovations Lab",
+      position: "Full Stack Developer",
+      location: "Remote",
+      period: "Jun 2020 - Dec 2021",
+      type: "Full-time",
+      logo: "https://ui-avatars.com/api/?name=DI&background=8b5cf6&color=fff&size=128",
+      responsibilities: [
+        "Developed and maintained e-commerce platform with 50K+ products",
+        "Integrated Stripe payment gateway and implemented secure checkout flow",
+        "Optimized database queries improving page load time by 40%",
+        "Collaborated with design team to implement responsive UI components",
+      ],
+      technologies: ["Next.js", "Express", "MongoDB", "Tailwind CSS"],
+    },
+    {
+      company: "StartUp Ventures",
+      position: "Frontend Developer",
+      location: "New York, NY",
+      period: "Jan 2019 - May 2020",
+      type: "Full-time",
+      logo: "https://ui-avatars.com/api/?name=SV&background=10b981&color=fff&size=128",
+      responsibilities: [
+        "Built responsive web applications using React and TypeScript",
+        "Implemented state management solutions with Redux",
+        "Worked closely with backend team to integrate REST APIs",
+        "Participated in agile development and sprint planning",
+      ],
+      technologies: ["React", "TypeScript", "Redux", "REST APIs"],
+    },
+  ];
+
+  const skillCategories = [
+    {
+      title: "Frontend",
+      icon: <Code className="w-5 h-5" />,
+      skills: [
+        {
+          name: "React / Next.js",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        },
+        {
+          name: "TypeScript",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "HTML & CSS",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        },
+        {
+          name: "Redux / Context API",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+        },
+        {
+          name: "Web Performance",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
+        },
+      ],
+    },
+    {
+      title: "Backend",
+      icon: <Server className="w-5 h-5" />,
+      skills: [
+        {
+          name: "Node.js / Express",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        },
+        {
+          name: "PostgreSQL",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
+        {
+          name: "MongoDB",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        },
+        {
+          name: "REST APIs",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+        },
+        {
+          name: "Authentication",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+        },
+        {
+          name: "Caching & CDN",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+        },
+      ],
+    },
+    {
+      title: "Tools & Platforms",
+      icon: <Wrench className="w-5 h-5" />,
+      skills: [
+        {
+          name: "Git & GitHub",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        },
+        {
+          name: "Docker",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        },
+        {
+          name: "AWS / Vercel",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+        },
+        {
+          name: "CI/CD Pipelines",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+        },
+        {
+          name: "Testing (Jest, Vitest)",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+        },
+        {
+          name: "GraphQL",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+        },
+      ],
+    },
+    {
+      title: "Soft Skills",
+      icon: <Users className="w-5 h-5" />,
+      skills: [
+        {
+          name: "Problem Solving",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stackoverflow/stackoverflow-original.svg",
+        },
+        {
+          name: "Team Collaboration",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+        },
+        {
+          name: "Technical Communication",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
+        },
+        {
+          name: "Code Review",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        },
+        {
+          name: "Project Management",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+        },
+        {
+          name: "Mentoring",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        },
+      ],
+    },
+  ];
 
   return (
-    <main className="flex-1 bg-background text-foreground">
-      <section className="padding-both nav-space">
-        <div className="containers">
-          <h1 className="text-4xl md:text-5xl font-bold mb-12">
-            Skills & Experience
+    <div className="padding-both">
+      <div className="containers nav-space">
+        {/* Header */}
+        <div className="mb-12 pb-6 border-b border-slate-200">
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">
+            Skills & Expertise
           </h1>
+          <p className="text-slate-600 text-lg">
+            Technical capabilities and professional competencies
+          </p>
+        </div>
 
-          {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-            {Object.entries(skills).map(([category, items]) => (
-              <div key={category}>
-                <h2 className="text-2xl font-semibold mb-6">{category}</h2>
-                <ul className="space-y-3">
-                  {items.map((skill) => (
-                    <li
-                      key={skill}
-                      className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition"
-                    >
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="border border-slate-200 rounded-lg p-6">
+              {/* Category Header */}
+              <div className="flex items-center gap-3 mb-5 pb-4 border-b border-slate-100">
+                <div className="text-slate-700">{category.icon}</div>
+                <h2 className="text-xl font-semibold text-slate-900">
+                  {category.title}
+                </h2>
               </div>
-            ))}
+
+              {/* Skills List */}
+              <ul className="space-y-3">
+                {category.skills.map((skill, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="w-6 h-6 object-contain"
+                    />
+                    <span className="text-slate-700">{skill.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="max-w-5xl mx-auto px-8 py-16">
+          {/* Header */}
+          <div className="mb-12 pb-6 border-b border-slate-200">
+            <h1 className="text-3xl font-bold text-slate-900 mb-2">
+              Work Experience
+            </h1>
+            <p className="text-slate-600 text-lg">
+              Professional journey and contributions
+            </p>
           </div>
 
           {/* Experience Timeline */}
-          <div className="border-t border-border pt-12">
-            <h2 className="text-3xl font-bold mb-12">Experience</h2>
-            <div className="space-y-12">
-              <div className="border-l-2 border-primary pl-6 pb-8">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Senior Full-Stack Developer
-                    </h3>
-                    <p className="text-muted-foreground">Tech Company Inc.</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground">
-                    2022 - Present
-                  </span>
-                </div>
-                <p className="text-muted-foreground mt-3">
-                  Led development of customer-facing applications, mentored
-                  junior developers, and implemented architectural improvements
-                  that reduced load times by 40%.
-                </p>
-              </div>
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <article
+                key={index}
+                className="relative pl-8 border-l-2 border-slate-200"
+              >
+                {/* Timeline Dot */}
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white" />
 
-              <div className="border-l-2 border-muted pl-6 pb-8">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Full-Stack Developer
+                {/* Company Header */}
+                <div className="flex items-start gap-4 mb-4">
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-12 h-12 rounded-lg border border-slate-200"
+                  />
+                  <div className="flex-1">
+                    <h2 className="text-xl font-semibold text-slate-900">
+                      {exp.position}
+                    </h2>
+                    <h3 className="text-lg text-slate-700 mt-1">
+                      {exp.company}
                     </h3>
-                    <p className="text-muted-foreground">Startup Co.</p>
+                    <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-slate-600">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-4 h-4" />
+                        {exp.period}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <MapPin className="w-4 h-4" />
+                        {exp.location}
+                      </span>
+                      <span className="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-xs font-medium border border-slate-200">
+                        {exp.type}
+                      </span>
+                    </div>
                   </div>
-                  <span className="text-sm text-muted-foreground">
-                    2020 - 2022
-                  </span>
                 </div>
-                <p className="text-muted-foreground mt-3">
-                  Built and shipped multiple product features, from MVP to
-                  scaling for thousands of concurrent users. Implemented
-                  real-time features and optimized database performance.
-                </p>
-              </div>
 
-              <div className="border-l-2 border-muted pl-6 pb-8">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-semibold">Junior Developer</h3>
-                    <p className="text-muted-foreground">Digital Agency</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground">
-                    2019 - 2020
-                  </span>
+                {/* Responsibilities */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-slate-900 mb-3">
+                    Key Responsibilities
+                  </h4>
+                  <ul className="space-y-2">
+                    {exp.responsibilities.map((responsibility, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-slate-600"
+                      >
+                        <ChevronRight className="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" />
+                        <span>{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-muted-foreground mt-3">
-                  Developed responsive websites and web applications for diverse
-                  clients. Learned full development lifecycle from requirements
-                  to deployment.
-                </p>
-              </div>
-            </div>
+
+                {/* Technologies */}
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-900 mb-2">
+                    Technologies Used
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech, i) => (
+                      <code
+                        key={i}
+                        className="px-2.5 py-1 bg-slate-100 text-slate-700 text-sm font-mono rounded border border-slate-200"
+                      >
+                        {tech}
+                      </code>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 }

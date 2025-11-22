@@ -1,19 +1,28 @@
-"use client";
+import React from "react";
+import { ArrowRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 
-import Link from "next/link";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-
-export default function HomePage() {
+export default function HeroSection() {
   return (
-    <main className="flex-1 bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="flex items-center padding-both nav-space">
-        <div className="containers">
-          <div className="mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-balance">
-              Full-Stack Developer & Problem Solver
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
+    <div className="min-h-screen bg-white">
+      <div className="max-w-5xl mx-auto px-8 py-24">
+        {/* Main Content */}
+        <div className="mb-12">
+          {/* Small Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-md border border-slate-200 mb-8">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Available for new opportunities
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+            Full-Stack Developer
+            <br />
+            <span className="text-slate-600">& Problem Solver</span>
+          </h1>
+
+          {/* Description */}
+          <div className="max-w-3xl space-y-4 text-lg text-slate-600 leading-relaxed mb-8">
+            <p>
               I am a Full Stack Developer specializing in building modern,
               scalable, and user-focused web applications. I work across the
               entire development cycle—from UI design and frontend development
@@ -22,7 +31,7 @@ export default function HomePage() {
               and high-performance portfolio websites that solve real business
               problems and deliver seamless user experiences.
             </p>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
+            <p>
               I primarily work with Next.js, React, Tailwind CSS, Node.js,
               MongoDB, Drizzle ORM, PostgreSQL, and REST/JSON APIs, while also
               integrating tools like NextAuth.js / BetterAuth for
@@ -31,113 +40,91 @@ export default function HomePage() {
               maintainable codebases with scalable structures, reusable
               components, and optimized performance.
             </p>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
+            <p>
               My work blends technical depth with a product-driven mindset,
               helping businesses improve automation, online presence, and
-              digital workflows through custom web solutions.z
+              digital workflows through custom web solutions.
             </p>
           </div>
+
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Link
-              href="/projects"
-              className="inline-flex border border-purple-500 bg-purple-500 text-white items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:opacity-90 transition"
+          <div className="flex flex-wrap gap-4 mb-12">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors"
             >
-              View My Work <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 border border-border px-6 py-3 rounded-lg hover:bg-muted transition"
+              View My Work
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-300 text-slate-700 font-medium rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors"
             >
-              Get In Touch <Mail size={18} />
-            </Link>
+              <Mail className="w-4 h-4" />
+              Get In Touch
+            </a>
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 text-muted-foreground">
+          <div className="flex items-center gap-4 pt-6 border-t border-slate-200">
+            <span className="text-sm text-slate-600 font-medium">Connect:</span>
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground transition"
+              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
               aria-label="GitHub"
             >
-              <Github size={24} />
+              <Github className="w-5 h-5" />
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground transition"
+              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} />
+              <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:hello@example.com"
-              className="hover:text-foreground transition"
+              href="mailto:your.email@example.com"
+              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
               aria-label="Email"
             >
-              <Mail size={24} />
+              <Mail className="w-5 h-5" />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+              aria-label="Resume"
+            >
+              <FileText className="w-5 h-5" />
             </a>
           </div>
         </div>
-      </section>
 
-      {/* Featured Section */}
-      {/* <section className="px-6 md:px-12 py-20 border-t border-border">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-8">Featured Projects</h2>
-          <div className="space-y-6">
-            <Link
-              href="/projects"
-              className="block p-6 border border-border rounded-lg hover:bg-muted transition group"
-            >
-              <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition">
-                E-Commerce Platform
-              </h3>
-              <p className="text-muted-foreground">
-                Full-stack marketplace with payment integration, real-time
-                analytics, and admin dashboard.
-              </p>
-              <div className="flex gap-2 mt-4 flex-wrap">
-                <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                  Next.js
-                </span>
-                <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                  Stripe
-                </span>
-                <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                  PostgreSQL
-                </span>
-              </div>
-            </Link>
-            <Link
-              href="/projects"
-              className="block p-6 border border-border rounded-lg hover:bg-muted transition group"
-            >
-              <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition">
-                Task Management App
-              </h3>
-              <p className="text-muted-foreground">
-                Collaborative workspace with real-time updates, team management,
-                and progress tracking.
-              </p>
-              <div className="flex gap-2 mt-4 flex-wrap">
-                <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                  React
-                </span>
-                <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                  Firebase
-                </span>
-                <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">
-                  Tailwind
-                </span>
-              </div>
-            </Link>
+        {/* Quick Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-slate-200">
+          <div className="text-center p-4">
+            <div className="text-3xl font-bold text-slate-900 mb-1">5+</div>
+            <div className="text-sm text-slate-600">Years Experience</div>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-3xl font-bold text-slate-900 mb-1">50+</div>
+            <div className="text-sm text-slate-600">Projects Completed</div>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-3xl font-bold text-slate-900 mb-1">20+</div>
+            <div className="text-sm text-slate-600">Technologies</div>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-3xl font-bold text-slate-900 mb-1">100%</div>
+            <div className="text-sm text-slate-600">Client Satisfaction</div>
           </div>
         </div>
-      </section>*/}
-    </main>
+      </div>
+    </div>
   );
 }

@@ -4,6 +4,10 @@ import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,9 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${openSans.variable}`}>
         <script
           defer
           src="https://cloud.umami.is/script.js"

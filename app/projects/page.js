@@ -1,134 +1,114 @@
-"use client";
+import React from "react";
+import { Code, ExternalLink, ArrowUpRight } from "lucide-react";
 
-import { ExternalLink, Github } from "lucide-react";
-import { Card } from "@/components/ui/card";
-
-export default function ProjectsPage() {
+export default function ProjectsSection() {
   const projects = [
     {
       title: "E-Commerce Platform",
       description:
         "Full-featured e-commerce marketplace with product catalog, shopping cart, payment processing, and admin dashboard.",
-      tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
-      links: {
-        github: "https://github.com",
-        live: "https://example.com",
-      },
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
+      technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
     {
       title: "Task Management Application",
       description:
         "Collaborative workspace for team productivity with real-time updates, task assignment, progress tracking, and team analytics.",
-      tags: ["React", "Firebase", "Tailwind CSS", "Socket.io"],
-      links: {
-        github: "https://github.com",
-        live: "https://example.com",
-      },
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+      technologies: ["React", "Firebase", "Tailwind CSS", "Socket.io"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
     {
       title: "Analytics Dashboard",
       description:
         "Real-time data visualization platform with interactive charts, custom reports, and data export functionality for business intelligence.",
-      tags: ["Next.js", "D3.js", "MongoDB", "Node.js"],
-      links: {
-        github: "https://github.com",
-        live: "https://example.com",
-      },
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      technologies: ["Next.js", "D3.js", "MongoDB", "Node.js"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
     {
       title: "Social Media Feed",
       description:
         "Dynamic feed application with user authentication, image uploads, likes, comments, and real-time notifications.",
-      tags: ["React", "Express", "MongoDB", "Cloud Storage"],
-      links: {
-        github: "https://github.com",
-        live: "https://example.com",
-      },
-    },
-    {
-      title: "AI Chat Application",
-      description:
-        "Intelligent chatbot with context awareness, conversation history, user accounts, and integration with multiple AI models.",
-      tags: ["Next.js", "OpenAI API", "React Query", "Prisma"],
-      links: {
-        github: "https://github.com",
-        live: "https://example.com",
-      },
-    },
-    {
-      title: "Content Management System",
-      description:
-        "Headless CMS for managing blog content, media assets, user roles, and content versioning with REST API.",
-      tags: ["Node.js", "PostgreSQL", "JWT", "Express"],
-      links: {
-        github: "https://github.com",
-        live: "https://example.com",
-      },
+      image:
+        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop",
+      technologies: ["React", "Express", "MongoDB", "Cloud Storage"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
   ];
 
   return (
-    <main className="flex-1 bg-background text-foreground">
-      <section className="nav-space padding-both">
-        <div className="containers">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
-          <p className="text-lg text-muted-foreground mb-12">
-            A selection of projects I have worked on, showcasing my skills in
-            full-stack development.
+    <div className="min-h-screen bg-white">
+      {/* Documentation-style sidebar layout */}
+      <div className="containers nav-space padding-both">
+        {/* Header */}
+        <div className="mb-12 pb-6 border-b border-slate-200">
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">Projects</h1>
+          <p className="text-slate-600 text-lg">
+            A selection of recent work and implementations
           </p>
-
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <Card
-                key={project.title}
-                className="p-6 border-border hover:border-primary transition flex flex-col"
-              >
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 grow">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs bg-secondary text-secondary-foreground px-2.5 py-1 rounded font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Links */}
-                <div className="flex gap-4">
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                    aria-label="GitHub repository"
-                  >
-                    <Github size={16} />
-                    Code
-                  </a>
-                  <a
-                    href={project.links.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                    aria-label="Live project"
-                  >
-                    <ExternalLink size={16} />
-                    Live
-                  </a>
-                </div>
-              </Card>
-            ))}
-          </div>
         </div>
-      </section>
-    </main>
+
+        {/* Projects List */}
+        {/* Projects List */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {projects.map((project, index) => (
+            <article
+              key={index}
+              className="group border border-slate-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+            >
+              <h2 className="text-2xl font-semibold text-slate-900 mb-3 group-hover:text-blue-600">
+                {project.title}
+              </h2>
+
+              <p className="text-slate-600 mb-4">{project.description}</p>
+
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <img
+                  src={project.image}
+                  className="w-full h-48 object-cover"
+                  alt=""
+                />
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-2 py-1 bg-slate-100 text-slate-700 text-sm font-mono rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-3">
+                <a
+                  className="flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-700"
+                  href={project.liveUrl}
+                >
+                  Live <ArrowUpRight className="w-4 h-4" />
+                </a>
+                <a
+                  className="flex items-center gap-1.5 text-sm text-slate-700 hover:text-slate-900"
+                  href={project.codeUrl}
+                >
+                  <Code className="w-4 h-4" />
+                  Code
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

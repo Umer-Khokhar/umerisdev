@@ -24,7 +24,7 @@ export default function Header() {
                   />
                 </svg>
               </div>
-              <span className="font-semibold text-lg">aad.iis-dev</span>
+              <span className="font-bold font-mono text-lg">UmerAswad</span>
             </div>
 
             {/* Desktop Navigation */}
