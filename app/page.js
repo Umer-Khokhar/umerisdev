@@ -3,7 +3,7 @@ import { ArrowRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-8 py-24">
         {/* Main Content */}
         <div className="mb-12">
@@ -51,7 +51,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4 mb-12">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors"
             >
               View My Work
               <ArrowRight className="w-4 h-4" />
@@ -63,65 +63,6 @@ export default function HeroSection() {
               <Mail className="w-4 h-4" />
               Get In Touch
             </a>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-4 pt-6 border-t border-slate-200">
-            <span className="text-sm text-slate-600 font-medium">Connect:</span>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="mailto:your.email@example.com"
-              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-              aria-label="Resume"
-            >
-              <FileText className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-
-        {/* Quick Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-slate-200">
-          <div className="text-center p-4">
-            <div className="text-3xl font-bold text-slate-900 mb-1">5+</div>
-            <div className="text-sm text-slate-600">Years Experience</div>
-          </div>
-          <div className="text-center p-4">
-            <div className="text-3xl font-bold text-slate-900 mb-1">50+</div>
-            <div className="text-sm text-slate-600">Projects Completed</div>
-          </div>
-          <div className="text-center p-4">
-            <div className="text-3xl font-bold text-slate-900 mb-1">20+</div>
-            <div className="text-sm text-slate-600">Technologies</div>
-          </div>
-          <div className="text-center p-4">
-            <div className="text-3xl font-bold text-slate-900 mb-1">100%</div>
-            <div className="text-sm text-slate-600">Client Satisfaction</div>
           </div>
         </div>
       </div>
