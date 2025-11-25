@@ -186,11 +186,9 @@ export default function SkillsSection() {
     <div className="padding-both">
       <div className="containers nav-space">
         {/* Header */}
-        <div className="mb-12 pb-6 border-b border-slate-200">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">
-            Skills & Expertise
-          </h1>
-          <p className="text-slate-600 text-lg">
+        <div className="mb-12 pb-6 border-b border-border">
+          <h1 className="text-3xl font-bold  mb-2">Skills & Expertise</h1>
+          <p className="text-slate-400 text-lg">
             Technical capabilities and professional competencies
           </p>
         </div>
@@ -198,13 +196,11 @@ export default function SkillsSection() {
         {/* Skills Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="border border-slate-200 rounded-lg p-6">
+            <div key={index} className="border border-border rounded-lg p-6">
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-5 pb-4 border-b border-slate-100">
-                <div className="text-slate-700">{category.icon}</div>
-                <h2 className="text-xl font-semibold text-slate-900">
-                  {category.title}
-                </h2>
+                <div className="text-slate-500">{category.icon}</div>
+                <h2 className="text-xl font-semibold ">{category.title}</h2>
               </div>
 
               {/* Skills List */}
@@ -216,7 +212,7 @@ export default function SkillsSection() {
                       alt={skill.name}
                       className="w-6 h-6 object-contain"
                     />
-                    <span className="text-slate-700">{skill.name}</span>
+                    <span className="text-slate-500">{skill.name}</span>
                   </li>
                 ))}
               </ul>
@@ -225,11 +221,9 @@ export default function SkillsSection() {
         </div>
         <div className="max-w-5xl mx-auto px-8 py-16">
           {/* Header */}
-          <div className="mb-12 pb-6 border-b border-slate-200">
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">
-              Work Experience
-            </h1>
-            <p className="text-slate-600 text-lg">
+          <div className="mb-12 pb-6 border-b border-border">
+            <h1 className="text-3xl font-bold  mb-2">Work Experience</h1>
+            <p className="text-slate-400 text-lg">
               Professional journey and contributions
             </p>
           </div>
@@ -239,7 +233,7 @@ export default function SkillsSection() {
             {experiences.map((exp, index) => (
               <article
                 key={index}
-                className="relative pl-8 border-l-2 border-slate-200"
+                className="relative pl-8 border-l-2 border-border"
               >
                 {/* Timeline Dot */}
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white" />
@@ -249,16 +243,14 @@ export default function SkillsSection() {
                   <img
                     src={exp.logo}
                     alt={exp.company}
-                    className="w-12 h-12 rounded-lg border border-slate-200"
+                    className="w-12 h-12 rounded-lg border border-border"
                   />
                   <div className="flex-1">
-                    <h2 className="text-xl font-semibold text-slate-900">
-                      {exp.position}
-                    </h2>
-                    <h3 className="text-lg text-slate-700 mt-1">
+                    <h2 className="text-xl font-semibold ">{exp.position}</h2>
+                    <h3 className="text-lg text-slate-500 mt-1">
                       {exp.company}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-slate-600">
+                    <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-slate-400">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-4 h-4" />
                         {exp.period}
@@ -267,7 +259,7 @@ export default function SkillsSection() {
                         <MapPin className="w-4 h-4" />
                         {exp.location}
                       </span>
-                      <span className="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-xs font-medium border border-slate-200">
+                      <span className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-xs font-medium border border-border">
                         {exp.type}
                       </span>
                     </div>
@@ -276,14 +268,14 @@ export default function SkillsSection() {
 
                 {/* Responsibilities */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-slate-900 mb-3">
+                  <h4 className="text-sm font-semibold  mb-3">
                     Key Responsibilities
                   </h4>
                   <ul className="space-y-2">
                     {exp.responsibilities.map((responsibility, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-2 text-slate-600"
+                        className="flex items-start gap-2 text-slate-400"
                       >
                         <ChevronRight className="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" />
                         <span>{responsibility}</span>
@@ -294,14 +286,14 @@ export default function SkillsSection() {
 
                 {/* Technologies */}
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-900 mb-2">
+                  <h4 className="text-sm font-semibold  mb-2">
                     Technologies Used
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, i) => (
                       <code
                         key={i}
-                        className="px-2.5 py-1 bg-slate-100 text-slate-700 text-sm font-mono rounded border border-slate-200"
+                        className="px-2.5 py-1 bg-slate-100 text-slate-500 text-sm font-mono rounded border border-border"
                       >
                         {tech}
                       </code>

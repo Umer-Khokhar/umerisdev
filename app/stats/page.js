@@ -19,10 +19,6 @@ export default function StatsPage() {
 
   const username = "umer-khokhar"; // Replace with your GitHub username
 
-  useEffect(() => {
-    fetchStats();
-  }, []);
-
   async function fetchStats() {
     try {
       // Fetch user profile
@@ -72,6 +68,9 @@ export default function StatsPage() {
       setLoading(false);
     }
   }
+  useEffect(() => {
+    fetchStats();
+  }, []);
 
   // Career stats (update with your data)
   const careerStats = [
@@ -102,7 +101,7 @@ export default function StatsPage() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-slate-200 border-t-slate-900 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading stats...</p>
+          <p className="">Loading stats...</p>
         </div>
       </div>
     );
@@ -113,30 +112,24 @@ export default function StatsPage() {
       <div className="containers nav-space">
         {/* Header */}
         <div className="mb-12 pb-6 border-b border-slate-200">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Statistics</h1>
-          <p className="text-slate-600 text-lg">
-            My professional journey and contributions
-          </p>
+          <h1 className="text-3xl font-bold mb-2">Statistics</h1>
+          <p className=" text-lg">My professional journey and contributions</p>
         </div>
 
         {/* Career Stats */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-6">
-            Career Overview
-          </h2>
+          <h2 className="text-2xl font-semibold mb-6">Career Overview</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {careerStats.map((stat, index) => (
               <div
                 key={index}
-                className="border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all"
+                className="border border-border rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all"
               >
                 <div className="flex items-center justify-between mb-3">
                   {stat.icon}
-                  <span className="text-3xl font-bold text-slate-900">
-                    {stat.value}
-                  </span>
+                  <span className="text-3xl font-bold">{stat.value}</span>
                 </div>
-                <div className="text-sm text-slate-600">{stat.label}</div>
+                <div className="text-sm ">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -146,14 +139,12 @@ export default function StatsPage() {
         {stats && (
           <section>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-semibold text-slate-900">
-                GitHub Activity
-              </h2>
+              <h2 className="text-2xl font-semibold">GitHub Activity</h2>
               <a
                 href={`https://github.com/${username}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors"
+                className="flex items-center gap-2 text-sm  hover: transition-colors"
               >
                 View Profile
                 <ExternalLink className="w-4 h-4" />
@@ -161,84 +152,72 @@ export default function StatsPage() {
             </div>
 
             {/* GitHub Profile Card */}
-            <div className="border border-slate-200 rounded-lg p-6 mb-6 flex items-center gap-6">
+            <div className="border border-border rounded-lg p-6 mb-6 flex items-center gap-6">
               <img
                 src={stats.avatar}
                 alt="GitHub Profile"
-                className="w-20 h-20 rounded-full border-2 border-slate-200"
+                className="w-20 h-20 rounded-full border-2 border-border"
               />
               <div className="flex-1">
-                <h3 className="text-xl font-semibold text-slate-900 mb-1">
-                  {stats.name}
-                </h3>
-                <p className="text-slate-600 mb-2">@{username}</p>
-                {stats.bio && (
-                  <p className="text-sm text-slate-600">{stats.bio}</p>
-                )}
+                <h3 className="text-xl font-semibold  mb-1">{stats.name}</h3>
+                <p className=" mb-2">@{username}</p>
+                {stats.bio && <p className="text-sm ">{stats.bio}</p>}
               </div>
             </div>
 
             {/* GitHub Stats Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
+              <div className="border border-border rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <Code className="w-5 h-5 text-blue-600" />
-                  <span className="text-3xl font-bold text-slate-900">
+                  <span className="text-3xl font-bold ">
                     {stats.publicRepos}
                   </span>
                 </div>
-                <div className="text-sm text-slate-600">
-                  Public Repositories
-                </div>
+                <div className="text-sm ">Public Repositories</div>
               </div>
 
-              <div className="border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
+              <div className="border border-border rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <Star className="w-5 h-5 text-yellow-500" />
-                  <span className="text-3xl font-bold text-slate-900">
+                  <span className="text-3xl font-bold ">
                     {stats.totalStars}
                   </span>
                 </div>
-                <div className="text-sm text-slate-600">Total Stars</div>
+                <div className="text-sm ">Total Stars</div>
               </div>
 
-              <div className="border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
+              <div className="border border-border rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <Users className="w-5 h-5 text-purple-600" />
-                  <span className="text-3xl font-bold text-slate-900">
-                    {stats.followers}
-                  </span>
+                  <span className="text-3xl font-bold ">{stats.followers}</span>
                 </div>
-                <div className="text-sm text-slate-600">Followers</div>
+                <div className="text-sm ">Followers</div>
               </div>
 
-              <div className="border border-slate-200 rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
+              <div className="border border-border rounded-lg p-6 hover:border-slate-300 hover:shadow-sm transition-all">
                 <div className="flex items-center justify-between mb-3">
                   <TrendingUp className="w-5 h-5 text-green-600" />
-                  <span className="text-3xl font-bold text-slate-900">
-                    {stats.following}
-                  </span>
+                  <span className="text-3xl font-bold ">{stats.following}</span>
                 </div>
-                <div className="text-sm text-slate-600">Following</div>
+                <div className="text-sm ">Following</div>
               </div>
             </div>
             <div className="my-8">
               <h2 className="text-xl font-bold mb-4">GitHub Contributions</h2>
-              <div className="border border-gray-300 p-4 rounded-lg">
+              <div className="border border-border p-4 rounded-lg">
                 <GitHubCalendar username="umer-khokhar" />
               </div>
             </div>
             {/* Top Repositories */}
-            <div className="border border-slate-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-slate-900 mb-6">
-                Top Repositories
-              </h3>
+            <div className="border border-border shadow-lg rounded-lg p-6">
+              <h3 className="text-xl font-semibold  mb-6">Top Repositories</h3>
 
               <div className="space-y-4">
                 {stats.topRepos.map((repo) => (
                   <div
                     key={repo.id}
-                    className="p-4 bg-slate-50 border border-slate-200 rounded-lg hover:bg-slate-100 transition-colors"
+                    className="p-4 border border-border rounded-lg hover:bg-border-hover transition-colors"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
@@ -246,14 +225,14 @@ export default function StatsPage() {
                           href={repo.html_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-slate-900 font-semibold hover:text-blue-600 transition-colors"
+                          className=" font-semibold hover:text-blue-600 transition-colors"
                         >
                           {repo.name}
                         </a>
-                        <p className="text-sm text-slate-600 mt-1">
+                        <p className="text-sm  mt-1">
                           {repo.description || "No description"}
                         </p>
-                        <div className="flex items-center gap-4 mt-3 text-sm text-slate-600">
+                        <div className="flex items-center gap-4 mt-3 text-sm ">
                           <span className="flex items-center gap-1">
                             <Star className="w-4 h-4 text-yellow-500" />
                             {repo.stargazers_count}
@@ -263,7 +242,7 @@ export default function StatsPage() {
                             {repo.forks_count}
                           </span>
                           {repo.language && (
-                            <code className="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs">
+                            <code className="px-2 py-0.5 bg-white border border-border rounded text-xs">
                               {repo.language}
                             </code>
                           )}

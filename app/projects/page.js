@@ -46,12 +46,12 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Documentation-style sidebar layout */}
       <div className="containers nav-space padding-both">
         {/* Header */}
-        <div className="mb-12 pb-6 border-b border-slate-200">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Projects</h1>
+        <div className="mb-12 pb-6 border-b border-border">
+          <h1 className="text-3xl font-bold  mb-2">Projects</h1>
           <p className="text-slate-600 text-lg">
             A selection of recent work and implementations
           </p>
@@ -63,9 +63,9 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="group border border-slate-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+              className="group border border-border rounded-xl p-6 bg-transparent shadow-sm hover:shadow-md transition"
             >
-              <h2 className="text-2xl font-semibold text-slate-900 mb-3 group-hover:text-blue-600">
+              <h2 className="text-2xl font-semibold  mb-3 group-hover:text-blue-600">
                 {project.title}
               </h2>
 
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
                   Live <ArrowUpRight className="w-4 h-4" />
                 </a>
                 <a
-                  className="flex items-center gap-1.5 text-sm text-slate-700 hover:text-slate-900"
+                  className="flex items-center gap-1.5 text-sm text-slate-700 hover:"
                   href={project.codeUrl}
                 >
                   <Code className="w-4 h-4" />

@@ -3,25 +3,19 @@ import { ArrowRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen">
-      <div className="max-w-5xl mx-auto px-8 py-24">
+    <div className="padding-both">
+      <div className="containers nav-space">
         {/* Main Content */}
         <div className="mb-12">
-          {/* Small Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 text-sm font-medium rounded-md border border-slate-200 mb-8">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            Available for new opportunities
-          </div>
-
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Full-Stack Developer
             <br />
-            <span className="text-slate-600">& Problem Solver</span>
+            <span className="text-gray-500">& Problem Solver</span>
           </h1>
 
           {/* Description */}
-          <div className="max-w-3xl space-y-4 text-lg text-slate-600 leading-relaxed mb-8">
+          <div className="max-w-3xl text-sm space-y-4 md:text-lg dark:text-slate-300 leading-relaxed mb-8">
             <p>
               I am a Full Stack Developer specializing in building modern,
               scalable, and user-focused web applications. I work across the

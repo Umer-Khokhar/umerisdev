@@ -22,19 +22,10 @@ const DocumentationSidebar = () => {
 
   return (
     <>
-      {/* Mobile menu button */}
-      <button
-        className="md:hidden fixed top-4 left-4 z-50 p-2"
-        onClick={toggleMobileMenu}
-        aria-label="Toggle menu"
-      >
-        {isMobileOpen ? "✕" : "☰"}
-      </button>
-
       {/* Sidebar */}
       <aside
-        className={`fixed bg-gray-50/50 blur-in-sm z-10 top-12 left-0 min-h-screen w-64 transform transition-transform duration-300 ease-in-out
-        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:mt-0 md:ml-0 md:h-auto border-r border-gray-200`}
+        className={`fixed bg-background/50 blur-in-sm z-10 top-12 left-0 min-h-screen w-64 transform transition-transform duration-300 ease-in-out
+        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:mt-0 md:ml-0 md:h-auto border-r border-border`}
       >
         <div className="padding-both">
           <h1 className="text-2xl font-bold mb-8">Portfolio Docs</h1>
@@ -55,15 +46,6 @@ const DocumentationSidebar = () => {
             </ul>
           </nav>
         </div>
-
-        {/* Close button for mobile */}
-        <button
-          className="md:hidden absolute top-4 right-4 p-2 text-gray-400 hover:text-white"
-          onClick={toggleMobileMenu}
-          aria-label="Close menu"
-        >
-          ✕
-        </button>
       </aside>
 
       {/* Overlay for mobile */}

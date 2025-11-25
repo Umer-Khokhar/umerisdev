@@ -47,7 +47,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <div className="containers nav-space padding-both">
         {/* Header Section */}
         <div className="mb-16">
@@ -63,15 +63,13 @@ export default function AboutPage() {
 
             {/* Profile Info */}
             <div className="flex-1">
-              <h1 className="text-4xl font-bold text-slate-900 mb-3">
-                Hi, I'm John Doe
-              </h1>
-              <p className="text-xl text-slate-600 mb-4">
+              <h1 className="text-4xl font-bold mb-3">Hi, I am Umer Aswad</h1>
+              <p className="text-xl mb-4">
                 Full Stack Developer & Tech Enthusiast
               </p>
 
               {/* Contact Info */}
-              <div className="flex flex-wrap gap-4 text-slate-600 mb-6">
+              <div className="flex flex-wrap gap-4 mb-6">
                 <a
                   href="mailto:john@example.com"
                   className="flex items-center gap-2 hover:text-blue-600 transition-colors"
@@ -89,21 +87,21 @@ export default function AboutPage() {
               <div className="flex gap-3">
                 <a
                   href="#"
-                  className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-background text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   GitHub
                 </a>
                 <a
                   href="#"
-                  className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:border-slate-400 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 border border-border text-sm font-medium rounded-lg hover:border-slate-400 transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
                 <a
                   href="#"
-                  className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:border-slate-400 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 border border-border text-sm font-medium rounded-lg hover:border-slate-400 transition-colors"
                 >
                   <Download className="w-4 h-4" />
                   Resume
@@ -117,23 +115,19 @@ export default function AboutPage() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-4 border border-slate-200 rounded-lg text-center"
+                className="p-4 border border-border rounded-lg text-center"
               >
-                <div className="text-2xl font-bold text-slate-900 mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-slate-600">{stat.label}</div>
+                <div className="text-2xl font-bold mb-1">{stat.value}</div>
+                <div className="text-sm text-slate-200">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* About Section */}
-        <section className="mb-12 pb-8 border-b border-slate-200">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-4">
-            About Me
-          </h2>
-          <div className="space-y-4 text-slate-600 leading-relaxed">
+        <section className="mb-12 pb-8 border-b border-border">
+          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+          <div className="space-y-4 dark:text-slate-300 leading-relaxed">
             <p>
               I'm a passionate Full Stack Developer with over 2 years of
               experience building modern web applications. I specialize in
@@ -156,24 +150,22 @@ export default function AboutPage() {
         </section>
 
         {/* What I Do Section */}
-        <section className="mb-12 pb-8 border-b border-slate-200">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-6">
-            What I Do
-          </h2>
+        <section className="mb-12 pb-8 border-b border-border">
+          <h2 className="text-2xl font-semibold mb-6">What I Do</h2>
           <div className="space-y-4">
-            <div className="border border-slate-200 rounded-lg p-5">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+            <div className="border border-border rounded-lg p-5">
+              <h3 className="text-lg font-semibold mb-2">
                 Frontend Development
               </h3>
-              <p className="text-slate-600">
+              <p className="dark:text-slate-300">
                 Building responsive, accessible, and performant user interfaces
                 with React, Next.js, and modern CSS frameworks. I focus on
                 creating delightful user experiences that work seamlessly across
                 all devices.
               </p>
             </div>
-            <div className="border border-slate-200 rounded-lg p-5">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+            <div className="border border-border rounded-lg p-5">
+              <h3 className="text-lg font-semibold mb-2">
                 Backend Development
               </h3>
               <p className="text-slate-600">
@@ -186,23 +178,19 @@ export default function AboutPage() {
         </section>
 
         {/* Interests Section */}
-        <section className="mb-12 pb-8 border-b border-slate-200">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-6">
-            Interests & Passions
-          </h2>
+        <section className="mb-12 pb-8 border-b border-border">
+          <h2 className="text-2xl font-semibold mb-6">Interests & Passions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {interests.map((interest, index) => (
               <div
                 key={index}
-                className="flex gap-4 p-4 border border-slate-200 rounded-lg"
+                className="flex gap-4 p-4 border-border rounded-lg"
               >
-                <div className=" p-2 bg-slate-100 rounded-lg text-slate-700">
+                <div className=" p-2 rounded-lg dark:text-slate-400">
                   {interest.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-1">
-                    {interest.title}
-                  </h3>
+                  <h3 className="font-semibold mb-1">{interest.title}</h3>
                   <p className="text-sm text-slate-600">
                     {interest.description}
                   </p>
@@ -213,26 +201,22 @@ export default function AboutPage() {
         </section>
 
         {/* Education Section */}
-        <section className="mb-12 pb-8 border-b border-slate-200">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-6">
+        <section className="mb-12 pb-8 border-b border-border">
+          <h2 className="text-2xl font-semibold mb-6">
             Education & Certifications
           </h2>
 
           <div className="space-y-6">
             {/* Education */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                Education
-              </h3>
-              <div className="border border-slate-200 rounded-lg p-5">
+              <h3 className="text-lg font-semibold mb-3">Education</h3>
+              <div className="border border-border rounded-lg p-5">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h4 className="font-semibold text-slate-900">
-                      B.S. Computer Science
-                    </h4>
+                    <h4 className="font-semibold">B.S. Computer Science</h4>
                     <p className="text-slate-600">University Name</p>
                   </div>
-                  <span className="text-sm text-slate-600 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+                  <span className="text-sm dark:text-slate-300 px-3 py-1 rounded-full border border-border">
                     2019
                   </span>
                 </div>
@@ -244,39 +228,39 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold text-slate-900 mb-3">
                 Professional Certifications
               </h3>
-              <div className="border border-slate-200 rounded-lg divide-y divide-slate-200">
+              <div className="border border-border rounded-lg divide-y divide-border">
                 <div className="p-4 flex justify-between items-center">
                   <div>
-                    <h4 className="font-medium text-slate-900">
-                      AWS Solutions Architect
-                    </h4>
-                    <p className="text-sm text-slate-600">
+                    <h4 className="font-medium">AWS Solutions Architect</h4>
+                    <p className="text-sm  dark:text-slate-600">
                       Amazon Web Services
                     </p>
                   </div>
-                  <span className="text-sm text-slate-600">2021-2023</span>
+                  <span className="text-sm text-slate-600 dark:text-slate-300">
+                    2021-2023
+                  </span>
                 </div>
                 <div className="p-4 flex justify-between items-center">
                   <div>
-                    <h4 className="font-medium text-slate-900">
-                      Google Cloud Professional
-                    </h4>
-                    <p className="text-sm text-slate-600">
+                    <h4 className="font-medium">Google Cloud Professional</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       Google Cloud Platform
                     </p>
                   </div>
-                  <span className="text-sm text-slate-600">2021-2023</span>
+                  <span className="text-sm text-slate-600 dark:text-slate-300">
+                    2021-2023
+                  </span>
                 </div>
                 <div className="p-4 flex justify-between items-center">
                   <div>
-                    <h4 className="font-medium text-slate-900">
-                      React Advanced Patterns
-                    </h4>
-                    <p className="text-sm text-slate-600">
+                    <h4 className="font-medium">React Advanced Patterns</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       Professional Development
                     </p>
                   </div>
-                  <span className="text-sm text-slate-600">2021-2023</span>
+                  <span className="text-sm text-slate-600 dark:text-slate-300">
+                    2021-2023
+                  </span>
                 </div>
               </div>
             </div>
@@ -284,10 +268,8 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center p-8 bg-slate-50 border border-slate-200 rounded-lg">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-3">
-            Let's Work Together
-          </h2>
+        <section className="text-center p-8 border border-border rounded-lg">
+          <h2 className="text-2xl font-semibold mb-3">Let's Work Together</h2>
           <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
             I'm always interested in hearing about new projects and
             opportunities. Whether you have a question or just want to say hi,
