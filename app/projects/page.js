@@ -52,7 +52,7 @@ export default function ProjectsSection() {
         {/* Header */}
         <div className="mb-12 pb-6 border-b border-border">
           <h1 className="text-3xl font-bold  mb-2">Projects</h1>
-          <p className="text-slate-600 text-lg">
+          <p className="text-secondary text-lg">
             A selection of recent work and implementations
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
                 {project.title}
               </h2>
 
-              <p className="text-slate-600 mb-4">{project.description}</p>
+              <p className="text-secondary mb-4">{project.description}</p>
 
               <div className="mb-4 overflow-hidden rounded-lg">
                 <img

@@ -98,7 +98,7 @@ export default function StatsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-slate-200 border-t-slate-900 rounded-full animate-spin mx-auto mb-4"></div>
           <p className="">Loading stats...</p>
@@ -152,7 +152,7 @@ export default function StatsPage() {
             </div>
 
             {/* GitHub Profile Card */}
-            <div className="border border-border rounded-lg p-6 mb-6 flex items-center gap-6">
+            <div className="border border-border rounded-lg p-6 mb-6 flex flex-col md:flex-row justify-center text-center md:text-start items-center gap-6">
               <img
                 src={stats.avatar}
                 alt="GitHub Profile"

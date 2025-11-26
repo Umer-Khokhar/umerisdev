@@ -26,8 +26,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${openSans.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${openSans.variable} bg-background`}>
         <script
           defer
           src="https://cloud.umami.is/script.js"

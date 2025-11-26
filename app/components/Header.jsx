@@ -1,7 +1,9 @@
 "use client";
-import { Search, Github, Moon, Music, ArrowRight, Sun } from "lucide-react";
+import { Search, Github, Music, ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import Link from "next/link";
+import ToggleBtn from "./ToggleBtn";
 const navLinks = [
   { title: "Home", href: "#" },
   { title: "LinkedIn", href: "#" },
@@ -20,7 +22,7 @@ const navSections = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const toggleTheme = () => {
     setIsDark(!isDark);
   };
@@ -79,13 +81,13 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
               {navLinks.map((link, idx) => (
-                <a
+                <Link
                   href={link.href}
                   key={idx}
-                  className=" font-medium hover:text-gray-600 transition-colors"
+                  className=" font-medium text-secondary transition-colors"
                 >
                   {link.title}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -117,25 +119,16 @@ export default function Header() {
               </div>
 
               {/* Music Icon */}
-              <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                <Music className="w-5 h-5 text-gray-700" />
+              <button className="p-2 hover:bg-hover rounded-lg transition-colors">
+                <Music className="w-5 h-5 text-secondary" />
               </button>
 
               {/* Theme Toggle */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 hover:bg-gray-100 cursor-pointer rounded-lg transition-colors"
-              >
-                {isDark ? (
-                  <Sun onClick={() => setTheme("dark")} />
-                ) : (
-                  <Moon onClick={() => setTheme("light")} />
-                )}
-              </button>
+              <ToggleBtn />
 
               {/* GitHub */}
-              <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                <Github className="w-5 h-5 text-gray-700" />
+              <button className="p-2 hover:bg-hover rounded-lg transition-colors">
+                <Github className="w-5 h-5 text-secondary" />
               </button>
             </div>
           </div>
@@ -144,7 +137,7 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="absolute top-0 bottom-0 left-0 right-0 w-full min-h-screen h-full bg-gray-500/50 ">
-            <div className="md:hidden py-4 absolute bg-white top-0 left-0 bottom-0 min-h-screen w-[85%] right-0 p-4 z-50 transition-all duration-300 ease-in">
+            <div className="md:hidden py-4 absolute bg-background top-0 left-0 bottom-0 min-h-screen w-[85%] right-0 p-4 z-50 transition-all duration-300 ease-in">
               <div className="flex items-center justify-between ">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
@@ -190,12 +183,13 @@ export default function Header() {
                     className="flex justify-between items-center border border-gray-200/90 rounded-md py-3 px-2"
                     key={idx}
                   >
-                    <a
+                    <Link
                       href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
                       className=" font-medium hover:text-gray-600 transition-colors"
                     >
                       {link.title}
-                    </a>
+                    </Link>
                     <span>
                       <ArrowRight className="h-4 w-4" />
                     </span>
@@ -207,15 +201,16 @@ export default function Header() {
                 <div className="flex flex-col gap-2">
                   {navSections.map((section, idx) => (
                     <div
-                      className="flex justify-between shadow shadow-gray-200 items-center bg-white rounded-md py-3 px-2"
+                      className="flex justify-between border border-border shadow shadow-background items-center  rounded-md py-3 px-2"
                       key={section.id}
                     >
-                      <a
+                      <Link
+                        onClick={() => setIsMenuOpen(false)}
                         href={section.id}
                         className=" font-medium hover:text-gray-600 transition-colors"
                       >
                         {section.label}
-                      </a>
+                      </Link>
                       <span>
                         <ArrowRight className="h-4 w-4" />
                       </span>

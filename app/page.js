@@ -15,7 +15,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Description */}
-          <div className="max-w-3xl text-sm space-y-4 md:text-lg dark:text-slate-300 leading-relaxed mb-8">
+          <div className="max-w-3xl text-sm space-y-4 md:text-lg text-secondary leading-relaxed mb-8">
             <p>
               I am a Full Stack Developer specializing in building modern,
               scalable, and user-focused web applications. I work across the
@@ -52,7 +52,7 @@ export default function HeroSection() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-300 text-slate-700 font-medium rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-300 text-secondary font-medium rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-colors"
             >
               <Mail className="w-4 h-4" />
               Get In Touch

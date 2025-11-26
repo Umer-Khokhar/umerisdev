@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
     --font-open-sans: "Open Sans", sans-serif;
 }
@@ -9,6 +11,8 @@
     --color-background: #ffffff;
     --color-foreground: #0a0a0a;
     --color-border: #e5e7eb;
+    --color-hover: #F9FAFB;
+    --color-secondary: #475569;
     --color-border-hover: #d1d5db;
     --color-border-focus: #3b82f6;
     --color-input: #e5e7eb;
@@ -19,9 +23,12 @@
 
 .dark {
     /* Dark mode */
-    --color-background: #0a0a0a;
+    --color-background: #121212;
     --color-foreground: #fafafa;
-    --color-border: #27272a;
+    --color-border: #323237;
+    --color-hover: #1F2937;
+    --color-secondary: #CBD5E1;
+    --color-border2: #4b4b53 ;
     --color-border-hover: #3f3f46;
     --color-border-focus: #60a5fa;
     --color-input: #27272a;

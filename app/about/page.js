@@ -118,7 +118,7 @@ export default function AboutPage() {
                 className="p-4 border border-border rounded-lg text-center"
               >
                 <div className="text-2xl font-bold mb-1">{stat.value}</div>
-                <div className="text-sm text-slate-200">{stat.label}</div>
+                <div className="text-sm text-secondary">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold mb-2">
                 Frontend Development
               </h3>
-              <p className="dark:text-slate-300">
+              <p className="text-secondary">
                 Building responsive, accessible, and performant user interfaces
                 with React, Next.js, and modern CSS frameworks. I focus on
                 creating delightful user experiences that work seamlessly across
@@ -168,7 +168,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold mb-2">
                 Backend Development
               </h3>
-              <p className="text-slate-600">
+              <p className="text-secondary">
                 Designing and implementing robust server-side applications with
                 Node.js, Express, and databases like PostgreSQL and MongoDB. I
                 ensure scalability, security, and optimal performance.
@@ -191,7 +191,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">{interest.title}</h3>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-secondary">
                     {interest.description}
                   </p>
                 </div>
@@ -214,7 +214,7 @@ export default function AboutPage() {
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h4 className="font-semibold">B.S. Computer Science</h4>
-                    <p className="text-slate-600">University Name</p>
+                    <p className="text-secondary">University Name</p>
                   </div>
                   <span className="text-sm dark:text-slate-300 px-3 py-1 rounded-full border border-border">
                     2019
@@ -232,33 +232,33 @@ export default function AboutPage() {
                 <div className="p-4 flex justify-between items-center">
                   <div>
                     <h4 className="font-medium">AWS Solutions Architect</h4>
-                    <p className="text-sm  dark:text-slate-600">
+                    <p className="text-sm  dark:text-secondary">
                       Amazon Web Services
                     </p>
                   </div>
-                  <span className="text-sm text-slate-600 dark:text-slate-300">
+                  <span className="text-sm text-secondary dark:text-slate-300">
                     2021-2023
                   </span>
                 </div>
                 <div className="p-4 flex justify-between items-center">
                   <div>
                     <h4 className="font-medium">Google Cloud Professional</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-secondary dark:text-slate-300">
                       Google Cloud Platform
                     </p>
                   </div>
-                  <span className="text-sm text-slate-600 dark:text-slate-300">
+                  <span className="text-sm text-secondary dark:text-slate-300">
                     2021-2023
                   </span>
                 </div>
                 <div className="p-4 flex justify-between items-center">
                   <div>
                     <h4 className="font-medium">React Advanced Patterns</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-secondary dark:text-slate-300">
                       Professional Development
                     </p>
                   </div>
-                  <span className="text-sm text-slate-600 dark:text-slate-300">
+                  <span className="text-sm text-secondary dark:text-slate-300">
                     2021-2023
                   </span>
                 </div>
@@ -270,7 +270,7 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="text-center p-8 border border-border rounded-lg">
           <h2 className="text-2xl font-semibold mb-3">Let's Work Together</h2>
-          <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-secondary mb-6 max-w-2xl mx-auto">
             I'm always interested in hearing about new projects and
             opportunities. Whether you have a question or just want to say hi,
             feel free to reach out!
