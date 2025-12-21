@@ -14,7 +14,7 @@ import {
 
 export default function AboutPage() {
   const stats = [
-    { label: "Years of Experience", value: "2+" },
+    { label: "Year of Experience", value: "1+" },
     { label: "Projects Completed", value: "20+" },
     { label: "Technologies Mastered", value: "10+" },
     { label: "Coffee Consumed", value: "∞" },
@@ -40,9 +40,9 @@ export default function AboutPage() {
     },
     {
       icon: <Heart className="w-5 h-5" />,
-      title: "Mentorship",
+      title: "Guidance & Mentorship",
       description:
-        "Helping junior developers grow and sharing knowledge with the community",
+        "Getting guidance from Experience developers. Love sharing knowledge with the community",
     },
   ];
 
@@ -55,9 +55,9 @@ export default function AboutPage() {
             {/* Profile Image */}
             <div className="flex-shrink-0">
               <img
-                src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff&size=200&bold=true"
+                src="https://avatars.githubusercontent.com/u/121288321?v=4"
                 alt="Profile"
-                className="w-32 h-32 rounded-full border-4 border-slate-200"
+                className="w-48 h-48 rounded-full border-4 border-slate-200"
               />
             </div>
 
@@ -129,7 +129,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <div className="space-y-4 dark:text-slate-300 leading-relaxed">
             <p>
-              I'm a passionate Full Stack Developer with over 2 years of
+              I'm a passionate Full Stack Developer with over 1 year of
               experience building modern web applications. I specialize in
               creating scalable, performant solutions using cutting-edge
               technologies like React, Node.js, and cloud platforms.
@@ -213,11 +213,11 @@ export default function AboutPage() {
               <div className="border border-border rounded-lg p-5">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h4 className="font-semibold">B.S. Computer Science</h4>
-                    <p className="text-secondary">University Name</p>
+                    <h4 className="font-semibold">FSc Pre Engineering</h4>
+                    <p className="text-secondary">Govt. College of Science, Wahdat Road Lahore</p>
                   </div>
                   <span className="text-sm dark:text-slate-300 px-3 py-1 rounded-full border border-border">
-                    2019
+                    2021 - 2023
                   </span>
                 </div>
               </div>
@@ -225,41 +225,19 @@ export default function AboutPage() {
 
             {/* Certifications */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-3">
+              <h3 className="text-lg font-semibold text-secondary mb-3">
                 Professional Certifications
               </h3>
               <div className="border border-border rounded-lg divide-y divide-border">
                 <div className="p-4 flex justify-between items-center">
                   <div>
-                    <h4 className="font-medium">AWS Solutions Architect</h4>
+                    <h4 className="font-medium">FreeCodeCamp Certification</h4>
                     <p className="text-sm  dark:text-secondary">
-                      Amazon Web Services
+                      Full Stack JavaScript Certification
                     </p>
                   </div>
                   <span className="text-sm text-secondary dark:text-slate-300">
-                    2021-2023
-                  </span>
-                </div>
-                <div className="p-4 flex justify-between items-center">
-                  <div>
-                    <h4 className="font-medium">Google Cloud Professional</h4>
-                    <p className="text-sm text-secondary dark:text-slate-300">
-                      Google Cloud Platform
-                    </p>
-                  </div>
-                  <span className="text-sm text-secondary dark:text-slate-300">
-                    2021-2023
-                  </span>
-                </div>
-                <div className="p-4 flex justify-between items-center">
-                  <div>
-                    <h4 className="font-medium">React Advanced Patterns</h4>
-                    <p className="text-sm text-secondary dark:text-slate-300">
-                      Professional Development
-                    </p>
-                  </div>
-                  <span className="text-sm text-secondary dark:text-slate-300">
-                    2021-2023
+                    2025
                   </span>
                 </div>
               </div>

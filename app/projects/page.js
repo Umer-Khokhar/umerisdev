@@ -2,48 +2,88 @@ import React from "react";
 import { Code, ExternalLink, ArrowUpRight } from "lucide-react";
 
 export default function ProjectsSection() {
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Full-featured e-commerce marketplace with product catalog, shopping cart, payment processing, and admin dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
-      technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
-      codeUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      title: "Task Management Application",
-      description:
-        "Collaborative workspace for team productivity with real-time updates, task assignment, progress tracking, and team analytics.",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
-      technologies: ["React", "Firebase", "Tailwind CSS", "Socket.io"],
-      codeUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      title: "Analytics Dashboard",
-      description:
-        "Real-time data visualization platform with interactive charts, custom reports, and data export functionality for business intelligence.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      technologies: ["Next.js", "D3.js", "MongoDB", "Node.js"],
-      codeUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      title: "Social Media Feed",
-      description:
-        "Dynamic feed application with user authentication, image uploads, likes, comments, and real-time notifications.",
-      image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop",
-      technologies: ["React", "Express", "MongoDB", "Cloud Storage"],
-      codeUrl: "#",
-      liveUrl: "#",
-    },
-  ];
+ const projects = [
+  {
+    title: "Custom Pack Boxes – Full Stack Platform",
+    description:
+      "A full-stack packaging business platform with dynamic product pages, category-based navigation, and an admin dashboard for managing products, categories, and inquiries.",
+    image:
+      "https://images.unsplash.com/photo-1605902711622-cfb43c44367f?w=800&h=500&fit=crop",
+    technologies: [
+      "Next.js",
+      "MongoDB",
+      "Node.js",
+      "Tailwind CSS",
+      "Mongoose",
+    ],
+    codeUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Multi-Tenant Lawn Care Services Platform",
+    description:
+      "A multi-tenant web application for lawn care businesses where each tenant has isolated data, services, and bookings with scalable backend architecture.",
+    image:
+      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&h=500&fit=crop",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
+    ],
+    codeUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Solvorr Tech – Digital Agency Website",
+    description:
+      "A modern digital agency website with sleek animations, smooth transitions, and a strong brand-focused UI to showcase services, vision, and client engagement.",
+    image:
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Modern UI/UX",
+    ],
+    codeUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Ebook Platform – Backend API",
+    description:
+      "A scalable REST API for an ebook platform handling authentication, users, ebooks, and secure access control. Frontend integration in progress.",
+    image:
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=500&fit=crop",
+    technologies: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "REST API",
+    ],
+    codeUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Learning Management System (LMS) – API",
+    description:
+      "A backend-focused LMS API with authentication, access & refresh token rotation, role-based authorization, and secure session handling.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop",
+    technologies: [
+      "Node.js",
+      "NestJS",
+      "JWT",
+      "Access & Refresh Tokens",
+      "MongoDB",
+    ],
+    codeUrl: "#",
+    liveUrl: "#",
+  },
+];
+
 
   return (
     <div className="min-h-screen">
@@ -83,7 +123,7 @@ export default function ProjectsSection() {
                 {project.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-2 py-1 bg-slate-100 text-slate-700 text-sm font-mono rounded"
+                    className="px-2 py-1 bg-slate-100 dark:bg-slate-700  text-sm font-mono rounded"
                   >
                     {tech}
                   </span>

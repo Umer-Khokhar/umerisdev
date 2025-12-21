@@ -1,9 +1,10 @@
 "use client";
+import { useState, useEffect } from "react";
 import { Search, Github, Music, ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useState } from "react";
 import Link from "next/link";
 import ToggleBtn from "./ToggleBtn";
+import { SearchCommand } from "./SearchCommand";
 const navLinks = [
   { title: "Home", href: "#" },
   { title: "LinkedIn", href: "#" },
@@ -19,13 +20,29 @@ const navSections = [
   { id: "contact", label: "Contact" },
   { id: "stats", label: "Stats" },
 ];
+
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [time, setTime] = useState(new Date());
+  const [isClient, setIsClient] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const getTime = () => {
+    let intervel = setInterval(() => {
+    setTime(new Date())    
+    }, 1000)
+    
+    return () => clearInterval(intervel)
+  }
+  useEffect(() => {
+    getTime()
+  }, [])
 
   return (
     <header
@@ -94,34 +111,35 @@ export default function Header() {
 
           {/* Right side - Search and Icons */}
           <div className="flex items-center space-x-4">
-            {/* Search Bar - Hidden on mobile */}
-            <div className="hidden lg:flex items-center bg-gray-50 rounded-lg px-3 py-2 w-64">
+             <div 
+              className="hidden lg:flex items-center bg-gray-50 dark:bg-slate-700 rounded-lg px-3 py-2 w-64 cursor-pointer"
+              onClick={() => setIsSearchOpen(true)}
+            >
               <Search className="w-4 h-4 text-gray-400 mr-2" />
               <input
                 type="text"
                 placeholder="Search sections..."
                 className="bg-transparent outline-none text-sm w-full text-gray-700 placeholder-gray-400"
+                disabled
               />
-              <kbd className="ml-2 flex items-center gap-2 px-2 py-0.5 text-xs font-semibold text-gray-600 bg-white border border-gray-200 rounded">
+              <kbd className="ml-2 flex items-center gap-2 px-2 py-0.5 text-xs font-semibold text-secondary bg-white dark:bg-slate-600 border border-gray-200 rounded">
                 <span>Ctrl</span>
                 <span>K</span>
               </kbd>
             </div>
+
 
             {/* Icons */}
             <div className="flex items-center space-x-3">
               {/* Time Display - Hidden on mobile */}
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium text-gray-700">
-                  20:49:58
-                </span>
+                {isClient && (
+                  <span className="text-sm font-medium text-secondary">
+                    {time.getHours()}:{time.getMinutes()}:{time.getSeconds()}
+                  </span>
+                )}
               </div>
-
-              {/* Music Icon */}
-              <button className="p-2 hover:bg-hover rounded-lg transition-colors">
-                <Music className="w-5 h-5 text-secondary" />
-              </button>
 
               {/* Theme Toggle */}
               <ToggleBtn />
@@ -222,6 +240,7 @@ export default function Header() {
           </div>
         )}
       </div>
+      <SearchCommand open={isSearchOpen} setOpen={setIsSearchOpen} navSections={navSections} />
     </header>
   );
 }

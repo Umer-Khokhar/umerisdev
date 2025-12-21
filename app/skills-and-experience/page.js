@@ -12,52 +12,54 @@ import {
 
 export default function SkillsSection() {
   const experiences = [
-    {
-      company: "Tech Solutions Inc.",
-      position: "Senior Full Stack Developer",
-      location: "San Francisco, CA",
-      period: "Jan 2022 - Present",
-      type: "Full-time",
-      logo: "https://ui-avatars.com/api/?name=TS&background=3b82f6&color=fff&size=128",
-      responsibilities: [
-        "Led development of microservices architecture serving 100K+ daily active users",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Mentored junior developers and conducted code reviews",
-        "Architected and built real-time analytics dashboard using React and D3.js",
-      ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"],
-    },
-    {
-      company: "Digital Innovations Lab",
-      position: "Full Stack Developer",
-      location: "Remote",
-      period: "Jun 2020 - Dec 2021",
-      type: "Full-time",
-      logo: "https://ui-avatars.com/api/?name=DI&background=8b5cf6&color=fff&size=128",
-      responsibilities: [
-        "Developed and maintained e-commerce platform with 50K+ products",
-        "Integrated Stripe payment gateway and implemented secure checkout flow",
-        "Optimized database queries improving page load time by 40%",
-        "Collaborated with design team to implement responsive UI components",
-      ],
-      technologies: ["Next.js", "Express", "MongoDB", "Tailwind CSS"],
-    },
-    {
-      company: "StartUp Ventures",
-      position: "Frontend Developer",
-      location: "New York, NY",
-      period: "Jan 2019 - May 2020",
-      type: "Full-time",
-      logo: "https://ui-avatars.com/api/?name=SV&background=10b981&color=fff&size=128",
-      responsibilities: [
-        "Built responsive web applications using React and TypeScript",
-        "Implemented state management solutions with Redux",
-        "Worked closely with backend team to integrate REST APIs",
-        "Participated in agile development and sprint planning",
-      ],
-      technologies: ["React", "TypeScript", "Redux", "REST APIs"],
-    },
-  ];
+  {
+    company: "Markonify",
+    position: "Full Stack Developer",
+    location: "Lahore, Pakistan",
+    period: "Dec 2024 - Present",
+    type: "Full-time",
+    logo: "https://ui-avatars.com/api/?name=MK&background=3b82f6&color=fff&size=128",
+    responsibilities: [
+      "Developed and deployed production-ready full-stack applications using Next.js and Node.js for multiple clients.",
+      "Built custom CMS and admin dashboards with role-based access control (RBAC) enabling non-technical users to manage content.",
+      "Implemented secure authentication systems using JWT, NextAuth.js, and BetterAuth including session management.",
+      "Optimized application performance using SSR/SSG, image optimization, and code splitting achieving 95+ Lighthouse scores.",
+      "Integrated third-party services such as Cloudinary for media handling and Nodemailer for automated email workflows."
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+      "NextAuth.js"
+    ],
+  },
+  {
+    company: "AAA Digital",
+    position: "Frontend Developer Intern",
+    location: "Lahore, Pakistan",
+    period: "Sep 2024 - Nov 2024",
+    type: "Internship",
+    logo: "https://ui-avatars.com/api/?name=AAA&background=8b5cf6&color=fff&size=128",
+    responsibilities: [
+      "Developed responsive user interfaces using React and Tailwind CSS based on Figma designs.",
+      "Worked closely with senior developers to integrate REST APIs into frontend applications.",
+      "Improved UI performance and accessibility across multiple client projects.",
+      "Gained hands-on experience with component-based architecture and modern frontend workflows."
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST APIs"
+    ],
+  },
+];
+
 
   const skillCategories = [
     {
@@ -81,8 +83,8 @@ export default function SkillsSection() {
           logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         },
         {
-          name: "Redux / Context API",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+          name: "Zustand / Context API",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg",
         },
         {
           name: "Web Performance",
@@ -99,8 +101,8 @@ export default function SkillsSection() {
           logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         },
         {
-          name: "PostgreSQL",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+          name: "Nest.js",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
         },
         {
           name: "MongoDB",
@@ -129,24 +131,24 @@ export default function SkillsSection() {
           logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
         },
         {
-          name: "Docker",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+          name: "Postman",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
         },
         {
-          name: "AWS / Vercel",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+          name: "Vercel",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original-wordmark.svg",
         },
         {
-          name: "CI/CD Pipelines",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+          name: "Figma",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
         {
-          name: "Testing (Jest, Vitest)",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+          name: "Testing",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-plain.svg",
         },
         {
-          name: "GraphQL",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+          name: "Chrome Dev Tool",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-plain.svg",
         },
       ],
     },
@@ -259,7 +261,7 @@ export default function SkillsSection() {
                         <MapPin className="w-4 h-4" />
                         {exp.location}
                       </span>
-                      <span className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-xs font-medium border border-border">
+                      <span className="px-2 py-0.5 bg-slate-100 dark:bg-slate-600 text-secondary rounded text-xs font-medium border border-border">
                         {exp.type}
                       </span>
                     </div>
@@ -293,7 +295,7 @@ export default function SkillsSection() {
                     {exp.technologies.map((tech, i) => (
                       <code
                         key={i}
-                        className="px-2.5 py-1 bg-slate-100 text-slate-500 text-sm font-mono rounded border border-border"
+                        className="px-2.5 py-1 dark:bg-slate-700 bg-slate-300 text-sm font-mono rounded border border-border"
                       >
                         {tech}
                       </code>
